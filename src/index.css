@@ -23,6 +23,8 @@
 
 .search-bar input{
     width: 55%;
+    border: solid black;
+    border-radius: 1vh;
     /* text-align: center; */
 }
 
@@ -49,6 +51,15 @@ input::placeholder{
     background-color: #697565;
     color: white;
     font-weight: bold;
+    
+}
+
+.items{
+    cursor: pointer;
+}
+
+.items:hover{
+    color: #3C3D37;
 }
 
 .img{
@@ -56,10 +67,12 @@ input::placeholder{
     justify-content: center;
     align-items: center;
 }
+ 
 
 .img img{
     width: 300px;
     height: 300px;
+    background-color: #3C3D37;
 }
 
 .con{
@@ -67,4 +80,7 @@ input::placeholder{
     justify-content: center;
     align-items: center;
     gap: 4rem;
+}
+.btn{
+    background-color: #697565;
 }

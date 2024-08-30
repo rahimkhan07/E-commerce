@@ -20,7 +20,7 @@ const Product = ({ items, cart, setCart }) => {
             pauseOnHover: true,
             draggable: true,
             progress: undefined,
-            theme: "dark",
+            theme: "light",
             });
 
     }
@@ -38,7 +38,7 @@ const Product = ({ items, cart, setCart }) => {
                 draggable
                 pauseOnHover
                 theme="dark"
-            />
+             style={{width:"35vh", marginTop:"20vh", borderRadius:"1vh"}}/>
 
             <div className="container">
                 <div className="row my-5">
@@ -46,13 +46,14 @@ const Product = ({ items, cart, setCart }) => {
                         items.map((product) => {
                             return (
                                 <>
-                                    <div key={product.id} className="col-lg-4 my-3 text-center ">
+                                    <div key={product.id} className="col-lg-4 my-3 text-center  ">
                                         <div className="card" style={{ width: '18rem' }}>
                                             <Link to={`/product/${product.id}`}
                                                 style={{
                                                     display: "flex",
                                                     justifyContent: "center",
                                                     alignItems: "center",
+                                                    
                                                 }}>
                                                 <img src={product.imgSrc} className="card-img-top" alt="..." />
                                             </Link>
@@ -60,10 +61,10 @@ const Product = ({ items, cart, setCart }) => {
                                             <div className="card-body">
                                                 <h5 className="card-title">{product.title}</h5>
                                                 <p className="card-text">{product.description}</p>
-                                                <button className=" btn btn-primary mx-3">₹{product.price}</button>
+                                                <h5 className=" mx-3">₹{product.price}</h5>
                                                 <button
                                                     onClick={() => addToCart(product.id, product.price, product.title, product.description, product.imgSrc)}
-                                                    className="btn btn-warning">Add to Cart
+                                                    className="btn btn-dark">Add to Cart
                                                 </button>
                                             </div>
                                         </div>

@@ -47,8 +47,8 @@ const Navbar = ({ setData, cart }) => {
             />
           </form>
           <Link to={'/cart'} className="cart">
-            <button type="button" className="btn btn-primary position-relative">
-            <BsFillCartCheckFill style={{fontSize:"1.6rem"}} />
+            <button type="button" className="btn btn-dark position-relative" style={{backgroundColor:"#697565"}}>
+            <BsFillCartCheckFill style={{fontSize:"1.6rem", backgroundColor:"#697565"}} />
               <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                 {cart.length}
                 <span className="visually-hidden">unread messages</span>
@@ -60,7 +60,7 @@ const Navbar = ({ setData, cart }) => {
     {
       location.pathname == '/' &&(
         <div className="nav-bar-wrapper">
-          <div className="items">Filter by {"->"} </div>
+          <div className="items" style={{color:"#3C3D37"}}>Filter by {"->"} </div>
           <div
             onClick={() => setData(items)}
             className="items">No Filter</div>
